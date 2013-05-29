@@ -11,7 +11,7 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>1.6_r2</version>
+            <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -24,7 +24,6 @@
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
                     <version>3.6.0</version>
-
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
@@ -35,8 +34,8 @@
                 <artifactId>android-maven-plugin</artifactId>
                 <configuration>
                     <sdk>
-                        <!-- platform or api level (api level 4 = platform 1.6)-->
-                        <platform>4</platform>
+                        <!-- platform or api level (api level 16 = platform 4.1)-->
+                        <platform>16</platform>
                     </sdk>
                 </configuration>
             </plugin>

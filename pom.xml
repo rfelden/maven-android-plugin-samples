@@ -23,7 +23,7 @@
     <name>Android Maven Plugin Samples - Aggregator</name>
 
     <modules>
-        <module>apidemos-android-10</module>
+        <module>apidemos-android-16</module>
         <module>helloflashlight</module>
         <module>morseflash</module>
         <module>scala</module>
@@ -86,7 +86,6 @@
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
                     <version>3.6.0</version>
-
                 </plugin>
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>

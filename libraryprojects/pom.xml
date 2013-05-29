@@ -29,12 +29,12 @@
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android</artifactId>
-                <version>2.3.3</version>
+                <version>4.1.1.4</version>
             </dependency>
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android-test</artifactId>
-                <version>2.3.3</version>
+                <version>4.1.1.4</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -46,10 +46,9 @@
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
                     <version>3.6.0</version>
-
                     <configuration>
                         <sdk>
-                            <platform>10</platform>
+                            <platform>16</platform>
                         </sdk>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
                     </configuration>

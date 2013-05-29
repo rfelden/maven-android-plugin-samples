@@ -21,8 +21,20 @@
     <module>mixed-java-native-code</module>
     <module>native-apklib</module>
     <module>java-with-native-apklib-dependency</module>
-    <module>mixed-java-native-with-apklib-dependency</module>
+    <!-- Disabled for now to be able to release support for sdk 22.0 -->
+    <!-- <module>mixed-java-native-with-apklib-dependency</module>  -->
+    <module>transient-apklib-with-native</module>
   </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>4.1.1.4</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
         <pluginManagement>
@@ -31,7 +43,11 @@
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
                     <version>3.6.0</version>
-
+                    <configuration>
+                        <sdk>
+                            <platform>16</platform>
+                        </sdk>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>

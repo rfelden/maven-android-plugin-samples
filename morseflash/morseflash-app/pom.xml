@@ -163,6 +163,7 @@
 						<artifactId>android-maven-plugin</artifactId>
 						<inherited>true</inherited>
 						<configuration>
+							<release>false</release>
 							<sign>
 								<debug>false</debug>
 							</sign>
