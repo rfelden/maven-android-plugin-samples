@@ -70,4 +70,45 @@
             </plugin>
         </plugins>
     </build>
+    
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                        <artifactId>android-maven-plugin</artifactId>
+                        <configuration>
+                            <dex>
+                                <!-- Required for EMMA -->
+                                <noLocals>true</noLocals>
+                            </dex>
+                            <test>
+                                <coverage>true</coverage>
+                                <createReport>true</createReport>
+                            </test>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>pull-coverage</id>
+                                <phase>post-integration-test</phase>
+                                <goals>
+                                    <goal>pull</goal>
+                                </goals>
+                                <configuration>
+                                    <pullSource>/data/data/com.simpligility.android.morseflash/files/coverage.ec</pullSource>
+                                    <pullDestination>${project.basedir}/../morseflash-app/target/jacoco-it.exec</pullDestination>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    
 </project>
+
+
+
